@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Explore Rajasthan</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5eee8;
+            color: #3d2923;
+            padding: 30px;
+        }
+
+        /* Main Banner */
+
+        .banner {
+            max-width: 1200px;
+            margin: auto;
+            padding: 45px;
+            background-color: #eadbd2;
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(70, 45, 30, 0.15);
+        }
+
+        /* Heading */
+
+        .heading {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .heading h1 {
+            font-size: 42px;
+            color: #49352c;
+            margin-bottom: 12px;
+        }
+
+        .heading p {
+            font-size: 16px;
+            color: #796257;
+            line-height: 1.6;
+        }
+
+        /* Destination Cards */
+
+        .destinations {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .destination {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+            border-radius: 20px;
+            background-color: #c9b3a3;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+            transition: 0.4s ease;
+        }
+
+        .destination:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.20);
+        }
+
+        /* Images */
+
+        .destination img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s ease;
+        }
+
+        .destination:hover img {
+            transform: scale(1.08);
+        }
+
+        /* Dark Overlay */
+
+        .destination::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 70%;
+
+            background: linear-gradient(
+                transparent,
+                rgba(25, 18, 14, 0.85)
+            );
+        }
+
+        /* Card Content */
+
+        .content {
+            position: absolute;
+            left: 25px;
+            right: 25px;
+            bottom: 25px;
+            z-index: 2;
+            color: white;
+        }
+
+        .content h2 {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        .content h3 {
+            font-size: 15px;
+            font-weight: normal;
+            font-style: italic;
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+
+        .location {
+            font-size: 14px;
+            margin-bottom: 18px;
+        }
+
+        /* Explore Button */
+
+        .btn {
+            display: inline-block;
+            padding: 12px 20px;
+
+            background-color: #fff8f2;
+            color: #684a3c;
+
+            text-decoration: none;
+
+            border-radius: 25px;
+
+            font-size: 13px;
+            font-weight: bold;
+
+            transition: 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #b98268;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        /* Information Section */
+
+        .information {
+            margin-top: 45px;
+            padding: 35px;
+
+            background-color: #fff8f2;
+
+            border-radius: 20px;
+        }
+
+        .information h2 {
+            text-align: center;
+            color: #684a3c;
+            margin-bottom: 25px;
+        }
+
+        .info-box {
+            margin-bottom: 20px;
+            padding: 20px;
+
+            background-color: #f5eee8;
+
+            border-radius: 15px;
+        }
+
+        .info-box h3 {
+            color: #8f604e;
+            margin-bottom: 8px;
+        }
+
+        .info-box p {
+            color: #705c53;
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        /* Footer */
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+
+            color: #796257;
+
+            font-size: 13px;
+            letter-spacing: 1px;
+        }
+
+        /* Responsive */
+
+        @media (max-width: 900px) {
+
+            .destinations {
+                grid-template-columns: 1fr;
+            }
+
+            .destination {
+                max-width: 500px;
+                width: 100%;
+                margin: auto;
+            }
+
+            .banner {
+                padding: 30px;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            body {
+                padding: 15px;
+            }
+
+            .banner {
+                padding: 22px;
+            }
+
+            .heading h1 {
+                font-size: 32px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <section class="banner">
+
+        <!-- Heading -->
+
+        <div class="heading">
+
+            <h1>Discover the Royal Rajasthan</h1>
+
+            <p>
+                Explore royal palaces, serene lakes and golden deserts.
+            </p>
+
+        </div>
+
+
+        <!-- Destination Cards -->
+
+        <div class="destinations">
+
+
+            <!-- Jaipur -->
+
+            <div class="destination">
+
+                <img
+                    src="https://images.unsplash.com/photo-1599661046827-dacff0c0f09a?auto=format&fit=crop&w=900&q=85"
+                    alt="Hawa Mahal Jaipur">
+
+                <div class="content">
+
+                    <h2>Jaipur</h2>
+
+                    <h3>
+                        Where Royalty Meets Timeless Beauty
+                    </h3>
+
+                    <p class="location">
+                        📍 Rajasthan, India
+                    </p>
+
+                    <a href="#jaipur-info" class="btn">
+                        Explore Jaipur
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Udaipur -->
+
+            <div class="destination">
+
+                <img
+                    src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=900&q=85"
+                    alt="Udaipur Lake Sunset">
+
+                <div class="content">
+
+                    <h2>Udaipur</h2>
+
+                    <h3>
+                        The City of Lakes & Royal Charm
+                    </h3>
+
+                    <p class="location">
+                        📍 Rajasthan, India
+                    </p>
+
+                    <a href="#udaipur-info" class="btn">
+                        Explore Udaipur
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Jaisalmer -->
+
+            <div class="destination">
+
+                <img
+                    src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?auto=format&fit=crop&w=900&q=85"
+                    alt="Thar Desert Jaisalmer">
+
+                <div class="content">
+
+                    <h2>Jaisalmer</h2>
+
+                    <h3>
+                        Where Golden Sands Meet Royalty
+                    </h3>
+
+                    <p class="location">
+                        📍 Rajasthan, India
+                    </p>
+
+                    <a href="#jaisalmer-info" class="btn">
+                        Explore Jaisalmer
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Information -->
+
+        <section class="information">
+
+            <h2>Explore Rajasthan</h2>
+
+
+            <div class="info-box" id="jaipur-info">
+
+                <h3>Jaipur — The Pink City</h3>
+
+                <p>
+                    Jaipur is famous for the beautiful Hawa Mahal,
+                    royal palaces, forts and colourful markets.
+                    It is a perfect destination to experience
+                    Rajasthan's rich history and culture.
+                </p>
+
+            </div>
+
+
+            <div class="info-box" id="udaipur-info">
+
+                <h3>Udaipur — The City of Lakes</h3>
+
+                <p>
+                    Udaipur is famous for its beautiful lakes,
+                    peaceful sunset views, City Palace and royal
+                    architecture. Lake Pichola is one of its
+                    most popular attractions.
+                </p>
+
+            </div>
+
+
+            <div class="info-box" id="jaisalmer-info">
+
+                <h3>Jaisalmer — The Golden City</h3>
+
+                <p>
+                    Jaisalmer is famous for the Thar Desert,
+                    golden sand dunes, camel safaris and the
+                    magnificent Jaisalmer Fort. It offers a
+                    unique desert travel experience.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Footer -->
+
+        <div class="footer">
+
+            TRAVEL • DISCOVER • EXPERIENCE
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>
